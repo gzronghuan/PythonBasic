@@ -9,7 +9,6 @@
 import logging
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import *
-from scapy.layers.inet import IP, ICMP
 
 
 def qytang_ping(ip):
@@ -22,7 +21,7 @@ def qytang_ping(ip):
 
 
 if __name__ == '__main__':
-    result = qytang_ping('192.168.3.1')
+    result = qytang_ping('192.168.3.125')
     if result[1]:
         print(result[0], '通!')
     else:
